@@ -1,9 +1,4 @@
-# Sistema de Recomendación con PySpark — Last.fm HetRec 2011
-
-**Materia:** Big Data Analytics con Spark — Licenciatura en Data Science  
-**Modelos:** ALS (PySpark) + BPR (PyTorch) con comparación empírica  
-**Dataset:** Last.fm HetRec 2011 (versión 2k, GroupLens)  
-**Entorno:** Google Colab (gratuito)
+# Sistema de Recomendación — Last.fm 
 
 ---
 
@@ -11,8 +6,8 @@
 
 ```
 .
-├── TP_Recomendacion_LastFM.ipynb   # Notebook principal ejecutado con outputs
-├── informe.pdf                     # Metodología, justificación y escalabilidad
+├── TP_Recomendacion_LastFM.ipynb   # Notebook ejecutado con los outputs
+├── informe.pdf                     # Explicación y respuestas de la consigna
 └── README.md                       # Este archivo
 ```
 
@@ -22,7 +17,7 @@
 
 ### 1. Entorno
 
-Ejecutar en **Google Colab gratuito**. No se requiere GPU — ALS corre íntegramente en Spark y BPR es liviano en CPU.
+Ejecutar en **Google Colab**
 
 ### 2. Descargar el dataset
 
@@ -32,17 +27,17 @@ El notebook descarga el dataset automáticamente en la celda 0.4 con:
 wget http://files.grouplens.org/datasets/hetrec2011/hetrec2011-lastfm-2k.zip
 ```
 
-No es necesario subir archivos manualmente.
+No es necesario subir los archivos manualmente.
 
 ### 3. Ejecutar el notebook
 
-1. Abrir `TP_Recomendacion_LastFM.ipynb` en Google Colab
-2. **Reiniciar el kernel** (`Runtime > Restart runtime`)
-3. Ejecutar todas las celdas en orden (`Runtime > Run all`)
+1. Ejecutar todas las celdas en orden (`Run all`)
 
-El notebook corre de punta a punta sin intervención manual, **excepto la Sección 9** (bonus de recomendaciones personalizadas), que requiere ingresar una API key de Last.fm por `getpass`. Para obtener una API key gratuita: [last.fm/api/account/create](https://www.last.fm/api/account/create)
+El notebook corre de punta a punta sin intervención manual, **excepto en la Sección 9** (bonus de recomendaciones personalizadas), que requiere ingresar una API key de Last.fm por `getpass`. Para obtener una API key gratuita: [last.fm/api/account/create](https://www.last.fm/api/account/create)
 
 Para saltear la Sección 9, simplemente no ejecutar las celdas 9.1–9.6.
+
+O sino, usar la API Key del informe.
 
 ### 4. Dependencias
 
@@ -72,11 +67,3 @@ El resto de las librerías (`torch`, `sklearn`, `matplotlib`, `pandas`, `numpy`)
 | Visualización de embeddings | PCA (sklearn) |
 
 ---
-
-## Dataset
-
-- **Nombre:** Last.fm HetRec 2011 (hetrec2011-lastfm-2k)
-- **Fuente:** [grouplens.org/datasets/hetrec-2011](https://grouplens.org/datasets/hetrec-2011/)
-- **Tamaño completo:** 1.892 usuarios, 17.632 artistas, 92.834 interacciones
-- **Subconjunto usado:** usuarios con 50–500 artistas únicos escuchados + artistas con ≥5 oyentes únicos → 1.827 usuarios, 2.828 artistas, 70.454 interacciones
-- **Tipo de interacción:** implícita (play counts, no ratings)
