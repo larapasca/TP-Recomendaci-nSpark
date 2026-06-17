@@ -37,8 +37,6 @@ El notebook corre de punta a punta sin intervención manual, **excepto en la Sec
 
 Para saltear la Sección 9, simplemente no ejecutar las celdas 9.1–9.6.
 
-O sino, usar la API Key del informe.
-
 ### 4. Dependencias
 
 PySpark se instala automáticamente en la primera celda:
