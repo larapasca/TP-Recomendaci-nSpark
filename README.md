@@ -97,38 +97,6 @@ Otras librerías vienen pre-instaladas en Colab:
 
 ---
 
-## Resultados principales
-
-### ALS (rank=50, regParam=0.01)
-
-| Métrica | Valor |
-|---------|-------|
-| Precision@10 | 0.0651 |
-| Recall@10 | 0.0896 |
-| NDCG@10 | 0.0824 |
-
-**Convergencia:** Alcanza plateau alrededor de iteración 6 (mejora < 1% a partir de ahí).
-
-### Comparación: ALS vs BPR
-
-| Modelo | Precision@10 | Recall@10 | NDCG@10 |
-|--------|--------------|-----------|---------|
-| ALS | 0.0651 | 0.0896 | 0.0824 |
-| BPR | 0.0461 | 0.0647 | 0.0678 |
-| **Ganador** | +29.1% | +38.6% | +21.5% |
-
-ALS supera a BPR en todas las métricas (explicado en informe, sección 5).
-
-### Ejemplos de recomendaciones (coherencia cualitativa)
-
-**Usuario 1:** Escucha `Vienna Teng, Fito y Fitipaldi, Amparanoia` → Recibe `La Oreja de Van Gogh, Coldplay, Fito y Fitipaldi` ✓
-
-**Usuario 2:** Escucha `Beatles, A.R. Rahman, Kishore Kumar` → Recibe `Mohammad Rafi, Ravi Shankar, Sankar Mahadevan` ✓
-
-**Usuario 3:** Escucha `Julieta Venegas, Russian Red, Joaquín Sabina` → Recibe artistas latinoamericanos similares ✓
-
----
-
 ## Documentación del subconjunto y sesgos
 
 ### Filtrado
