@@ -8,8 +8,8 @@
 ```
 .
 ├── tp-recomendacion-spark.ipynb    # Notebook ejecutado con outputs visibles
-├── TP_Informe_Final_-_Spark.pdf    # Informe: metodología, análisis, escalabilidad
-└── README.md                        # Este archivo
+├── informe.pdf                     # Informe: metodología, análisis, escalabilidad
+└── README.md                       # Este archivo
 ```
 
 ---
